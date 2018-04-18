@@ -1,0 +1,68 @@
+/* template/scroll_group/scroll_group.wxss */
+
+.section-list{
+  width: 100%;
+  white-space: nowrap;
+}
+
+.section-li{
+  width: 200rpx;
+  display: inline-flex;
+  flex-direction: column;
+  margin-left:20rpx;
+  overflow: hidden;
+}
+
+.section-li:last-child{
+  margin-right: 20rpx;
+}
+
+.section-li image{
+  width: 200rpx;
+}
+
+.section-li .title{
+  font-size: 12px;
+  margin-top:5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.score{
+  display: flex;
+}
+
+.score .star{
+  width: 138rpx;
+  height: 35rpx;
+  position: relative;
+  margin-right: 5px;
+  overflow: hidden;
+}
+
+.score .star .grey{
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: url(https://cloud-minapp-9266.cloud.ifanrusercontent.com/1f5ouEtPiVGMGRZT.png) no-repeat;
+  background-size: 100%;
+}
+
+.score .star .light{
+  position: absolute;
+  left: 0px;
+  right: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-size:100% 100%;
+}
+
+.score .num{
+  font-size: 12px;
+  color: #999;
+}

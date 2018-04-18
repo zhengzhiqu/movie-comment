@@ -1,0 +1,8 @@
+<!--pages/preface/preface.wxml-->
+<view class='container'>
+  <text class='title'>前言</text>
+  <text class='text-s'>本小程序模仿豆瓣电影开发，旨在学习和交流小程序开发，不作为引流推广或其他商业用途</text>
+  <text class='text-s'>代码下载地址(复制以下链接)</text>
+  <text class='text-s'>http://fanyi.youdao.com/</text>
+  <button class='btn-link' bindtap='switchTabIndex'>查看演示</button>
+</view>

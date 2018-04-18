@@ -1,0 +1,113 @@
+/* pages/recent_movie_list/recent_movie_list.wxss */
+
+/*seciton*/
+
+.section-title-row{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  border-bottom: solid 1px #f3f3f3;
+}
+
+.section-title{
+  width: 250rpx;
+  line-height: 40px;
+  text-align: center;
+  border-right: solid 1px #f3f3f3;
+}
+
+.section-title:last-child{
+  border: none;
+}
+
+.section-title-h1{
+  font-size: 14px;
+  font-weight: bold;
+  color: #999;
+}
+
+.icon-triangle{
+  font-size: 12px;
+  color: #999;
+  margin-left: 3px;
+}
+
+.section-title-active .section-title-h1,
+.section-title-active .icon-triangle{
+  color: #5CC16D;
+}
+
+.section-list{
+  padding: 50rpx 25rpx;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-li{
+  width: 200rpx;
+  display: flex;
+  flex-direction: column;
+  margin-right: 50rpx;
+  margin-bottom: 50rpx;
+  overflow: hidden;
+}
+
+.section-li:nth-child(3n){
+  margin-right: 0px;
+}
+
+.section-li-image{
+  width: 200rpx;
+  height: 280rpx;
+}
+
+.section-li .title{
+  font-size: 12px;
+  margin-top:5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.score{
+  display: flex;
+}
+
+.score .star{
+  width: 138rpx;
+  height: 18px;
+  position: relative;
+  margin-right: 5px;
+  overflow: hidden;
+}
+
+.score .star .grey{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: url(https://cloud-minapp-9266.cloud.ifanrusercontent.com/1f5ouEtPiVGMGRZT.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.score .star .light{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-size:100% 100%;
+}
+
+.score .num{
+  font-size: 12px;
+  color: #999;
+}
+
+.text-s{
+  margin: 0 auto;
+}

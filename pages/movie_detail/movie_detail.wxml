@@ -1,0 +1,95 @@
+<!--pages/movie_detail/movie_detail.wxml-->
+<nav-bar></nav-bar>
+<view class='container'>
+  <view class='poster'>
+    <view class='poster-image'>
+      <view class='poster-color'></view>
+      <image src="{{movie.poster_image}}" mode=''></image>
+    </view>
+    <view class='cover'>
+      <view class='cover-image'>
+        <image src="{{movie.cover_image}}" mode=''></image>
+      </view>
+      <view class='profile'>
+        <view class='title-cn'>{{movie.name_cn}}</view>
+        <view class='title-en' wx:if="{{movie.name_en}}">{{movie.name_en}}</view>
+        <view class='score' wx:if="{{movie.score && movie.score != 0}}">
+          <view class='score-num'>{{movie.score}}</view>
+          <view class='score-star'>
+            <view class='star'>
+              <canvas canvas-id='star'></canvas>
+            </view>
+            <view class='total-num'>{{movie.total_num}}人评价</view>
+          </view>
+        </view>
+        <view class='score-none' wx:else>暂无评价</view>
+      </view>
+    </view>
+  </view>
+  <view class='label'>
+    <view class='label-ul'>
+      <view class='label-li'>时长：{{movie.duration}}分钟</view>
+      <view class='label-li'>{{movie.style}}</view>
+    </view>
+    <view class='label-ul'>
+      <view class='label-li'>{{movie.release_date}}上映</view>
+      <view class='label-li'>{{movie.origin}}</view>
+    </view>
+    <view class='label-ul'>
+      <view class='label-li'>{{movie.director}}（导演） {{movie.cast}}</view>
+    </view>
+  </view>
+  <view class='eval-btn'>
+    <button class='{{!movie.release ? "full" : ""}}' wx:if="{{movie.wantToSee}}" bindtap='collection'>取消收藏</button>
+    <button class='{{!movie.release ? "full" : ""}}' wx:else bindtap='collection'>想看</button>
+    <block wx:if="{{movie.release}}">
+      <button wx:if="{{movie.haveSeen}}" bindtap='switchTabMember'>我的评价</button>
+      <button wx:else bindtap='navigatorToEval'>看过</button>
+    </block>
+  </view>
+  <view class='plot'>
+    <view class='title'>头号玩家剧情简介</view>
+    <view class='desc' wx:if='{{movie.plotTab}}'>
+      <block wx:if='{{movie.plotFlag}}'>
+        <text>{{movie.plotPre}}</text>
+        <text bindtap='plotCut' class='plotCut'>[展开全部]</text>
+      </block>
+      <block wx:else>
+        <text>{{movie.plot}}</text>
+        <text bindtap='plotCut' class='plotCut'>[收起]</text>
+      </block>
+    </view>
+    <view wx:else>{{movie.plot}}</view>
+  </view>
+  <view class='eval'>
+    <view class='title'>短评({{movie.total_num}})</view>
+    <view class='eval-li' wx:for="{{comments}}" wx:key='*this'>
+      <view class='avatar'>
+        <image src="{{item.avatar}}"></image>
+      </view>
+      <view class=''>
+        <view class='row'>
+          <text class='nickname'>{{item.nickname}}</text>
+          <view class='score'>
+            <view class='star'>
+              <view class='grey'></view>
+              <view class='light' style="background: linear-gradient(90deg,#f9bc25 {{item.score*10+'%'}},#999 {{item.score*10+'%'}});"></view>
+            </view>
+          </view>
+        </view>
+        <view class='row'>
+          <text class='created-at'>{{item.created_at}}</text>
+        </view>
+        <view class='row'>
+          <text class='eval-content'>{{item.content}}</text>
+        </view>
+      </view>
+      <view class='like {{item.liked?"liked":""}}' data-id='{{index}}' bindtap='toLike'>
+        <text class='iconfont {{item.liked?"icon-like-active":"icon-like"}}'></text>
+        <text class=''>{{item.like?item.like.length:0}}</text>
+      </view>
+    </view>
+    <button class='text-s' loading='{{load.more}}'>{{load.text}}</button>
+  </view>
+</view>
+

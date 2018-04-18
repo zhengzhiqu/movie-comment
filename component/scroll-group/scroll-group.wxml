@@ -1,0 +1,20 @@
+<!--template/scroll_group/scroll_group.wxml-->
+<view class='section'>
+  <slot name='title'></slot>
+  <scroll-view class='section-list' scroll-x>
+    <view class='section-li' wx:for="{{datas}}" wx:key="*this" data-id='{{item.id}}' bindtap='navigateToDetail'>
+      <image src='{{item.cover_image}}' mode='widthFix' lazy-load></image>
+      <text class='title'>{{item.name_cn}}</text>
+      <view class='score' wx:if="{{item.score && item.score != 0}}">
+        <view class='star'>
+          <view class='grey'></view>
+          <view class='light' style="background: linear-gradient(90deg,#f9bc25 {{item.score*10+'%'}},#999 {{item.score*10+'%'}});"></view>
+        </view>
+        <view class='num'>{{item.score}}</view>
+      </view>
+      <view wx:else class='score'>
+        <view class='num'>暂无评价</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

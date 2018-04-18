@@ -1,0 +1,87 @@
+<!--pages/member/member.wxml-->
+<nav-bar></nav-bar>
+<view class='user'>
+  <image class='user-avatar' src='{{userInfo.avatar}}'></image>
+  <text class='user-nickname'>{{userInfo.nickname}}</text>
+</view>
+<view class='section'>
+  <view class='section-title'>
+    <text class='section-title-h1'>想看</text>
+    <text class='section-title-more' bindtap='navigateToList'>更多></text>
+  </view>
+  <view class='section-list'>
+    <view class='section-li' wx:for="{{wantToSee}}" wx:key="*this" data-id='{{item.id}}' bindtap='navigateToDetail'>
+      <image class='section-li-image' src='{{item.cover_image}}' mode='widthFix'></image>
+      <text class='title'>{{item.name_cn}}</text>
+      <view class='score' wx:if="{{item.score && item.score != 0}}">
+        <view class='star'>
+          <view class='grey'></view>
+          <view class='light' style="background: linear-gradient(90deg,#f9bc25 {{item.score*10+'%'}},#999 {{item.score*10+'%'}});"></view>
+        </view>
+        <view class='num'>{{item.score}}</view>
+      </view>
+      <view wx:else class='score'>
+        <view class='num'>暂无评价</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='section'>
+  <view class='section-title'>
+    <text class='section-title-h1'>看过</text>
+    <text class='section-title-more' bindtap='navigateToList'>更多></text>
+  </view>
+  <view class='section-list'>
+    <view class='section-li' wx:for="{{haveSeen}}" wx:key="*this" data-id='{{item.id}}' bindtap='navigateToDetail'>
+      <image class='section-li-image' src='{{item.cover_image}}' mode='widthFix'></image>
+      <text class='title'>{{item.name_cn}}</text>
+      <view class='score' wx:if="{{item.score && item.score != 0}}">
+        <view class='star'>
+          <view class='grey'></view>
+          <view class='light' style="background: linear-gradient(90deg,#f9bc25 {{item.score*10+'%'}},#999 {{item.score*10+'%'}});"></view>
+        </view>
+        <view class='num'>{{item.score}}</view>
+      </view>
+      <view wx:else class='score'>
+        <view class='num'>暂无评价</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='section'>
+  <view class='section-title'>
+    <text class='section-title-h1'>我的短评</text>
+  </view>
+  <view class='comment'>
+    <view class='comment-li' wx:for="{{comments}}" wx:key="*this" wx:for-item="commentsItem" wx:for-index="commentsIndex">
+      <view class='comment-list'>
+        <view class='comment-row'>
+          <view class='comment-star'>
+            <view class='iconfont icon-star-solid {{(commentsItem.score)/2 > scoreIndex ? "icon-star-active" : "" }}' wx:for="{{[0,1,2,3,4]}}" wx:key="*this" wx:for-item="scoreItem" wx:for-index="scoreIndex"></view>
+          </view>
+          <view class='comment-like'>{{commentsItem.like.length}}人赞同</view>
+        </view>
+        <view class='comment-content'>{{commentsItem.content}}</view>
+      </view>
+      <view class='movie-card' data-id='{{commentsItem.id}}' bindtap='navigateToDetail'>
+        <image class='movie-card-image' src='{{commentsItem.cover_image}}' mode='widthFix'></image>
+        <view class='movie-card-col'>
+          <text class='movie-card-title'>{{commentsItem.name_cn}}</text>
+          <view class='score' wx:if="{{commentsItem.score && commentsItem.score != 0}}">
+            <view class='star'>
+              <view class='grey'></view>
+              <view class='light' style="background: linear-gradient(90deg,#f9bc25 {{commentsItem.score*10+'%'}},#999 {{commentsItem.score*10+'%'}});"></view>
+            </view>
+            <view class='num'>{{commentsItem.score}}</view>
+          </view>
+          <view wx:else class='score'>
+            <view class='num'>暂无评价</view>
+          </view>
+          <view class='movie-card-style'>{{commentsItem.style}}</view>
+          <view class='movie-card-release-date'>{{commentsItem.release_date}}上映</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class='text-s' loading='{{commentsParam.more}}'>{{commentsParam.text}}</button>
+</view>

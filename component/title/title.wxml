@@ -1,0 +1,5 @@
+<!--template/title/title.wxml-->
+<view class="vc margin-v-m">
+  <text class='title-l'>{{title}}</text>
+  <text class='text-s'>{{desc}}</text>
+</view>

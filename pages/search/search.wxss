@@ -1,0 +1,109 @@
+/* pages/search/search.wxss */
+@import "../../common/icon.wxss";
+
+input{
+  height: 100%;
+  padding-left: 5px;
+}
+
+.head{
+  width: 100%;
+  height: 100rpx;
+  padding: 10rpx 25rpx;
+  background-color: #5CC16D;
+}
+
+.search-group{
+  display: flex;
+  align-content: middle;
+  justify-content: space-between;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.search{
+  display: flex;
+  width: 90%;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.icon-search{
+  color: #999;
+  text-indent: 1em;
+}
+
+.search-group .cancel{
+  color: #fff;
+}
+
+/*历史记录*/
+.search-history{
+  padding: 0 25rpx;
+  margin-top: 25rpx;
+}
+
+.search-history-title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #999;
+}
+
+.search-history-row{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-history-text{
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  border: solid 1px #666;
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.search-hot-text{
+  color: #40BD55;
+  border: solid 1px #40BD55;
+}
+
+/*搜索列表*/
+.search-list{
+  padding: 25rpx;
+}
+
+.search-li{
+  margin: 5px 0;
+  display: flex;
+}
+
+.search-li-image{
+  width: 80rpx;
+  height: 112rpx;
+}
+
+.search-li-col{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search-li-title{
+  font-size: 14px;
+  color: #000;
+  line-height: 1;
+}
+
+.search-li-fill{
+  font-size: 14px;
+  color: #999;
+  line-height: 1;
+}

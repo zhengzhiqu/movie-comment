@@ -1,0 +1,27 @@
+<!--pages/recent_movie_list/recent_movie_list.wxml-->
+<nav-bar></nav-bar>
+<view class='section'>
+  <view class='section-title-row'>
+    <view class='section-title {{tab.index == index ? "section-title-active" : ""}}' wx:for="{{tab.title}}" wx:key="*this" data-id="{{index}}" bindtap='movieTab'>
+      <text class='section-title-h1'>{{item}}</text>
+      <text class='iconfont icon-triangle'></text>
+    </view>
+  </view>
+  <view class='section-list'>
+    <view class='section-li' wx:for="{{movie}}" wx:key="*this" data-id='{{item.id}}' bindtap='navigateToDetail'>
+      <image class='section-li-image' src='{{item.cover_image}}' mode='widthFix'></image>
+      <text class='title'>{{item.name_cn}}</text>
+      <view class='score' wx:if="{{item.score && item.score != 0}}">
+        <view class='star'>
+          <view class='grey'></view>
+          <view class='light' style="background: linear-gradient(90deg,#f9bc25 {{item.score*10+'%'}},#999 {{item.score*10+'%'}});"></view>
+        </view>
+        <view class='num'>{{item.score}}</view>
+      </view>
+      <view wx:else class='score'>
+        <view class='num'>暂无评价</view>
+      </view>
+    </view>
+    <button class='text-s' loading='{{param.more}}'>{{param.text}}</button>
+  </view>
+</view>

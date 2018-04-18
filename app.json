@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/preface/preface",
+    "pages/index/index",
+    "pages/member_movie_list/member_movie_list",
+    "pages/recent_movie_list/recent_movie_list",
+    "pages/search/search",
+    "pages/member/member",
+    "pages/comment/comment",
+    "pages/movie_detail/movie_detail",
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5CC16D",
+    "navigationBarTitleText": "查影片",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#5CC16D"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#2ba245",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "影片",
+        "iconPath": "image/movie.png",
+        "selectedIconPath": "image/movie-active.png"
+      },
+      {
+        "pagePath": "pages/member/member",
+        "text": "我的",
+        "iconPath": "image/member.png",
+        "selectedIconPath": "image/member-active.png"
+      }
+    ]
+  }
+}

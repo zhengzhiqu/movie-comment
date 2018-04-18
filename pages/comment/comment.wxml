@@ -1,0 +1,17 @@
+<!--pages/eval/eval.wxml-->
+<view class='container'>
+  <view class='score' wx:if="{{comment.choose >= 0}}">{{comment.star[comment.choose]}}</view>
+  <view class='score' wx:else>点击星星评分</view>
+  <view class='star'>
+    <view class='iconfont icon-star-solid {{comment.choose >= index ? "icon-star-active" : "" }}' wx:for="{{comment.star}}" wx:key="*this" data-id="{{index}}" bindtap='commentScore'></view>
+  </view>
+  <view class='eval-content'>
+    <form class='submit-form' id='submit' bindsubmit='submitScore'>
+      <view class='form-group'>
+        <textarea class='content-textarea' placeholder='请留下您的感言或评价(不少于6个字)' name='content' maxlength='{{comment.maxLength}}' cursor-spacing='850rpx' bindinput='contentInput'></textarea>
+        <text class="content-text">{{comment.content.length}}/{{comment.maxLength}}</text>
+      </view>
+      <button class='submit-btn' type='primary' form-type='submit'>提交</button>
+    </form>
+  </view>
+</view>

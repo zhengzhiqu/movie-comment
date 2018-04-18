@@ -1,0 +1,7 @@
+<swiper class='swiper' indicator-dots="{{indicatorDots}}" indicator-color='{{indicatorColor}}' indicator-active-color='{{indicatorActiveColor}}' autoplay="{{autoplay}}" interval='{{interval}}' circular='{{circular}}' vertical="{{false}}" display-multiple-items="1">
+  <block wx:for="{{src}}" wx:key="*this">
+    <swiper-item>
+      <image class='image' src="{{item}}" mode='scaleToFill' data-url="{{path[index]}}" data-id="{{index}}" bindtap='navigateTo'></image>
+    </swiper-item>
+  </block>
+</swiper>

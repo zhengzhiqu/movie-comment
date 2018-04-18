@@ -1,0 +1,19 @@
+/* component/nav-bar/nav-bar.wxss */
+@import "../../common/icon.wxss";
+
+.head{
+  width: 100%;
+  height: 100rpx;
+  padding: 10rpx 25rpx;
+  background-color: #5CC16D;
+}
+
+.icon-search{
+  width: 100%;
+  height: 60rpx;
+  color: #999;
+  line-height: 60rpx;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+}

@@ -1,0 +1,192 @@
+/* pages/member/member.wxss */
+
+/*user*/
+.user{
+  width: 750rpx;
+  height: 360rpx;
+  background: url(https://cloud-minapp-9266.cloud.ifanrusercontent.com/1f7iDJPnGDbkJyQU.jpg) no-repeat center center;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-avatar{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+
+.user-nickname{
+  font-size: 20px;
+  color: #fff;
+  margin-top: 20rpx;
+}
+
+/*seciton*/
+.section{
+  padding: 25rpx;
+  margin: 40rpx 0;
+}
+
+.section-title{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 10px;
+}
+
+.section-title-h1{
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}
+
+.section-title-more{
+  font-size: 14px;
+  color: #5CC16D;
+}
+
+.section-list{
+  width: 100%;
+  display: flex;
+}
+
+.section-li{
+  width: 200rpx;
+  display: flex;
+  flex-direction: column;
+  margin-right: 50rpx;
+  overflow: hidden;
+}
+
+.section-li:last-child{
+  margin-right: 0px;
+}
+
+.section-li-image{
+  width: 200rpx;
+  height: 280rpx;
+}
+
+.section-li .title{
+  font-size: 12px;
+  margin-top:5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.score{
+  display: flex;
+}
+
+.score .star{
+  width: 138rpx;
+  height: 18px;
+  position: relative;
+  margin-right: 5px;
+  overflow: hidden;
+}
+
+.score .star .grey{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: url(https://cloud-minapp-9266.cloud.ifanrusercontent.com/1f5ouEtPiVGMGRZT.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.score .star .light{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-size:100% 100%;
+}
+
+.score .num{
+  font-size: 12px;
+  color: #999;
+}
+
+/*comment*/
+
+.comment-li{
+  margin-top: 50rpx;
+}
+
+.comment-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-star{
+  display: flex;
+}
+
+.icon-star-solid{
+  color: #999;
+  font-size: 16px;
+}
+
+.icon-star-active{
+  color: #feb631;
+}
+
+.comment-like{
+  font-size: 12px;
+  color: #999;
+}
+
+.comment-content{
+  font-size: 14px;
+  color: #000;
+  margin-top: 5px;
+}
+
+.movie-card{
+  width: 550rpx;
+  background-color: #fff;
+  border: solid 1px #ddd;
+  padding: 20rpx;
+  display: flex;
+  margin: 20rpx auto;
+}
+
+.movie-card-image{
+  width: 114rpx;
+  height: 160rpx;
+}
+
+.movie-card-col{
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card-title{
+  font-size: 18px;
+}
+
+.movie-card .star .grey{
+  background: url(https://cloud-minapp-9266.cloud.ifanrusercontent.com/1f53jYcxLJYMjHUo.png) no-repeat;
+  background-size: 100%;
+}
+
+.movie-card-style{
+  font-size: 14px;
+  color: #999;
+}
+
+.movie-card-release-date{
+  font-size: 14px;
+  color: #999;
+}

@@ -1,0 +1,18 @@
+/* pages/preface/preface.wxss */
+.container{
+  padding: 25rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2;
+}
+
+.container .title{
+  font-size: 20px;
+  color: #000;
+}
+
+.btn-link{
+  text-align: left;
+  font-size: 16px;
+}

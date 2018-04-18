@@ -1,0 +1,5 @@
+<!--component/star-score/star-score.wxml-->
+<!--<canvas class='star' canvas-id='{{star-id}}'></canvas>
+<slot></slot>
+-->
+<canvas class='star' canvas-id='starCanvas'></canvas>

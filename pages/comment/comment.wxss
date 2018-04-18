@@ -1,0 +1,63 @@
+/* pages/eval/eval.wxss */
+.container{
+  padding: 25rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score{
+  margin-top: 50rpx;
+  font-size: 14px;
+  color: #999;
+}
+
+.star{
+  display: flex;
+  margin-top: 10px;
+}
+
+.icon-star-solid{
+  margin: 0 2px;
+  color: #999;
+  font-size: 40px;
+}
+
+.icon-star-active{
+  color: #feb631;
+}
+
+.eval-content{
+  width: 100%;
+  margin-top: 60rpx;
+}
+
+.submit-form{
+  width: 100%;
+}
+
+.form-group{
+  width: 100%;
+  position:relative;
+}
+
+.content-textarea{
+  width: 100%;
+  height: 200px;
+  background: #fff;
+  border: solid 1px #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.content-text{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 12px;
+  color: #999;
+}
+
+.submit-btn{
+  margin-top: 10px;
+}

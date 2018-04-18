@@ -1,0 +1,8 @@
+<!--template/icon_group/icon_group.wxml-->
+<view class='icon-group'>
+  <view class='icon-group-li margin-vl' style='width:{{width}}rpx;' wx:for="{{src}}" wx:key="*this" data-url="{{path[index]}}" data-id="{{index}}" bindtap='navigateTo'>
+    <image class='image' src="{{item}}" mode='scaleToFill' style='width:{{iconWidth}}rpx;height:{{iconHeight}}rpx;'></image>
+    <text class='title' wx:if="{{title}}">{{_title[index]}}</text>
+    <text class='desc' wx:if="{{desc}}">{{_desc[index]}}</text>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<nav-bar></nav-bar>
+<view class='section'>
+  <scroll-group datas="{{movieTime}}" href="movie_detail" class='scroll-group'>
+    <view slot='title' class='h1'>
+      <view class='title'>近期上映</view>
+      <view class='more' bindtap='navigateToList'>更多></view>
+    </view>
+  </scroll-group>
+</view>
+<view class='section'>
+  <scroll-group datas="{{movieComment}}" href="movie_detail" class='scroll-group'>
+    <view slot='title' class='h1'>
+      <view class='title'>热评电影</view>
+      <view class='more' bindtap='navigateToList'>更多></view>
+    </view>
+  </scroll-group>
+</view>

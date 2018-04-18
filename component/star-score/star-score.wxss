@@ -1,0 +1,5 @@
+/* component/star-score/star-score.wxss */
+.star{
+  width: 130px;
+  height: 18px;
+}

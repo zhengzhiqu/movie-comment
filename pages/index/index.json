@@ -1,0 +1,9 @@
+{
+  "usingComponents":{
+    "slider":"../../component/slider/slider",
+    "icon-group": "../../component/icon_group/icon_group",
+    "title": "../../component/title/title",
+    "scroll-group": "../../component/scroll-group/scroll-group",
+    "nav-bar":"../../component/nav-bar/nav-bar"
+  }
+}

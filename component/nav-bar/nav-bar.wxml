@@ -1,0 +1,4 @@
+<!--component/nav-bar/nav-bar.wxml-->
+<view class='head'>
+  <view class='iconfont icon-search' bindtap='navigateTo'>搜索</view>
+</view>

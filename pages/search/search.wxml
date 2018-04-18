@@ -1,0 +1,38 @@
+<!--pages/search/search.wxml-->
+<view class='head'>
+  <view class='search-group'>
+    <view class='search'>
+      <view class='iconfont icon-search' bindtap=''></view>
+      <input type='text' placeholder='搜索' focus confirm-type='search' bindblur="setSearchName" bindinput='searchMovie'></input>
+    </view>
+    <view class='cancel' bindtap='cancel'>取消</view>
+  </view>
+</view>
+<view class='search-history' wx:if='{{searchName.length > 0}}'>
+  <view class='search-history-title'>
+    <text>历史记录</text>
+    <text bindtap='clearSearchName'>清除</text>
+  </view>
+  <view class='search-history-row'>
+    <text class='search-history-text' wx:for="{{searchName}}" wx:key="*this" data-name="{{item}}" bindtap='searchHistory'>{{item}}</text>
+  </view>
+</view>
+<view class='search-history' wx:if='{{searchHotName.length > 0}}'>
+  <view class='search-history-title'>
+    <text>热门搜索</text>
+  </view>
+  <view class='search-history-row'>
+    <text class='search-history-text search-hot-text' wx:for="{{searchHotName}}" wx:key="*this" data-id="{{item.id}}" bindtap='navigateToDetail'>{{item.name_cn}}</text>
+  </view>
+</view>
+<view class='search-list'>
+  <view class='search-li' wx:for="{{movie}}" wx:key="*this" data-id="{{item.id}}" bindtap='navigateToDetail'>
+    <image class='search-li-image' src='{{item.cover_image}}'></image>
+    <view class='search-li-col'>
+      <text class='search-li-title'>{{item.name_cn}}</text>
+      <text class='search-li-fill'>{{item.score}} / {{item.release_date}}</text>
+      <text class='search-li-fill'>{{item.style}}</text>
+    </view>
+  </view>
+  <button class='text-s' loading='{{search.loading}}' hidden='{{!search.show}}'>{{search.text}}</button>
+</view>
